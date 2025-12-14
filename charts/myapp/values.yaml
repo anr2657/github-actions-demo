@@ -8,10 +8,8 @@ replicaCount: 1
 # This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
 image:
   repository: ghcr.io/anr2657/github-actions-demo
-  # This sets the pull policy for images.
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: sha-f1e8d7f5fe50f48e13b0ede554ff8431a05015b8
 
 # This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 imagePullSecrets: []
@@ -123,4 +121,4 @@ tolerations: []
 affinity: {}
 
 
-#secretRef: myapp-secret
+secretRef: ghcr-secret
